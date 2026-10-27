@@ -97,6 +97,7 @@
       color: #666;
       font-size: 14px;
       margin-bottom: 12px;
+      line-height: 1.5;
     }
 
     .price {
@@ -113,6 +114,7 @@
       padding: 12px;
       border-radius: 8px;
       text-decoration: none;
+      font-weight: bold;
     }
 
     .buy:hover {
@@ -127,11 +129,39 @@
       margin-top: 30px;
       font-size: 13px;
     }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 45px 5%;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .section {
+        padding: 30px 5%;
+      }
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header>
     <h1>Men's Style Daily</h1>
 
@@ -141,106 +171,143 @@
     </nav>
   </header>
 
+
+  <!-- HERO -->
   <section class="hero" id="home">
     <h2>Upgrade Your Style</h2>
     <p>Discover men's fashion, outfits and everyday style essentials.</p>
   </section>
 
+
+  <!-- PRODUCTS -->
   <section class="section" id="products">
+
     <h2>Featured Products</h2>
 
     <div class="products">
 
-      <!-- BLACK LEATHER JACKET -->
+
+      <!-- 1. BLACK LEATHER JACKET -->
       <div class="card">
+
         <img
           src="leather_jacket_cropped.jpg"
           alt="Men's Black Leather Jacket">
 
         <div class="card-content">
+
           <h3>Men's Black Leather Jacket</h3>
-          <p>Classic black leather jacket for a clean and stylish look.</p>
+
+          <p>
+            Classic black leather jacket for a clean and stylish look.
+          </p>
+
           <div class="price">₹1,799</div>
 
           <a
             class="buy"
             href="https://link.amazon/B0gpDIj8b"
             target="_blank"
-            rel="noopener">
+            rel="noopener noreferrer">
             Shop Now
           </a>
+
         </div>
       </div>
 
 
-      <!-- BLACK HALF ZIP SWEATSHIRT -->
+      <!-- 2. BLACK HALF ZIP SWEATSHIRT -->
       <div class="card">
+
         <img
           src="black_half_zip_cropped.jpg"
           alt="Men's Black Half-Zip Sweatshirt">
 
         <div class="card-content">
+
           <h3>Men's Black Half-Zip Sweatshirt</h3>
-          <p>Minimal black half-zip sweatshirt for everyday casual outfits.</p>
+
+          <p>
+            Minimal black half-zip sweatshirt for everyday casual outfits.
+          </p>
+
           <div class="price">₹699</div>
 
           <a
             class="buy"
             href="https://amzn.to/4iDemVx"
             target="_blank"
-            rel="noopener">
+            rel="noopener noreferrer">
             Shop Now
           </a>
+
         </div>
       </div>
 
 
-      <!-- BEIGE PANTS -->
+      <!-- 3. BEIGE PANTS -->
       <div class="card">
+
         <img
           src="beige_pants_cropped.jpg"
-          alt="Men's Beige Pants">
+          alt="Men's Snow Beige Pants">
 
         <div class="card-content">
+
           <h3>Men's Snow Beige Pants</h3>
-          <p>Relaxed wide-fit beige pants for a clean modern outfit.</p>
+
+          <p>
+            Relaxed wide-fit beige pants for a clean modern outfit.
+          </p>
+
           <div class="price">Check Price</div>
 
           <a
             class="buy"
             href="https://link.amazon/B0bzM3Iux"
             target="_blank"
-            rel="noopener">
+            rel="noopener noreferrer">
             Shop Now
           </a>
+
         </div>
       </div>
 
 
-      <!-- COWBOY BELT -->
+      <!-- 4. COWBOY BELT -->
       <div class="card">
+
         <img
           src="cowboy_belt_cropped.jpg"
           alt="Western Cowboy Buckle Belt">
 
         <div class="card-content">
+
           <h3>Western Cowboy Buckle Belt</h3>
-          <p>Bold western-style belt to add character to your casual outfits.</p>
+
+          <p>
+            Bold western-style belt to add character to your casual outfits.
+          </p>
+
           <div class="price">Check Price</div>
 
           <a
             class="buy"
-            href="#"
+            href="https://www.amazon.in/dp/B079ZZRMK8/ref=cm_sw_r_as_gl_apa_gl_i_dl_DR3V3EWPAWD1JJXBY0FN?linkCode=ml1&tag=themensstyled-21&linkId=581a1d0b39be308ae21dc53b734320b2"
             target="_blank"
-            rel="noopener">
+            rel="noopener noreferrer">
             Shop Now
           </a>
+
         </div>
       </div>
+
 
     </div>
   </section>
 
+
+  <!-- FOOTER -->
   <footer>
     © 2026 Men's Style Daily · Fashion & Style Recommendations
   </footer>
