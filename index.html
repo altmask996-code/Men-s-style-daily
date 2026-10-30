@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,102 +23,118 @@
     header {
       background: #111;
       color: white;
-      padding: 22px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 22px 15px;
+      text-align: center;
     }
 
     header h1 {
-      font-size: 24px;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 12px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 18px;
+      margin: 0 10px;
       font-size: 14px;
     }
 
     .hero {
-      padding: 55px 6%;
       background: #e9e4dc;
       text-align: center;
+      padding: 45px 20px;
     }
 
     .hero h2 {
-      font-size: 38px;
-      margin-bottom: 12px;
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
     .hero p {
-      color: #555;
       font-size: 16px;
-    }
-
-    .section {
-      padding: 40px 6%;
-    }
-
-    .section h2 {
-      margin-bottom: 25px;
-      font-size: 26px;
+      color: #444;
     }
 
     .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
-    .card {
+    .section-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
       background: white;
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
     }
 
-    .card img {
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
       width: 100%;
       height: 320px;
-      object-fit: cover;
+      object-fit: contain;
+      background: #fff;
       display: block;
     }
 
-    .card-content {
-      padding: 18px;
+    .product-info {
+      padding: 20px;
     }
 
-    .card h3 {
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-
-    .card p {
-      color: #666;
-      font-size: 14px;
+    .product-info h3 {
+      font-size: 21px;
       margin-bottom: 12px;
-      line-height: 1.5;
     }
 
-    .price {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 14px;
+    .product-info p {
+      color: #555;
+      line-height: 1.6;
+      font-size: 14px;
+      margin-bottom: 18px;
     }
 
-    .buy {
-      display: block;
-      background: #111;
-      color: white;
-      text-align: center;
+    .style-tip {
+      background: #f1eee9;
       padding: 12px;
       border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 18px;
+      color: #333;
     }
 
-    .buy:hover {
+    .buy-btn {
+      display: block;
+      text-align: center;
+      background: #111;
+      color: white;
+      padding: 13px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+
+    .buy-btn:hover {
       background: #333;
     }
 
@@ -125,35 +142,22 @@
       background: #111;
       color: #aaa;
       text-align: center;
-      padding: 25px;
-      margin-top: 30px;
+      padding: 25px 15px;
+      margin-top: 50px;
       font-size: 13px;
     }
 
     @media (max-width: 600px) {
-      header {
-        padding: 18px 5%;
-      }
-
       header h1 {
-        font-size: 20px;
-      }
-
-      nav a {
-        margin-left: 10px;
-        font-size: 12px;
-      }
-
-      .hero {
-        padding: 45px 5%;
+        font-size: 24px;
       }
 
       .hero h2 {
-        font-size: 30px;
+        font-size: 26px;
       }
 
-      .section {
-        padding: 30px 5%;
+      .product-card img {
+        height: 280px;
       }
     }
   </style>
@@ -161,156 +165,76 @@
 
 <body>
 
-  <!-- HEADER -->
   <header>
     <h1>Men's Style Daily</h1>
 
     <nav>
-      <a href="#home">Home</a>
+      <a href="#">Home</a>
       <a href="#products">Products</a>
+      <a href="#style">Style Guide</a>
     </nav>
   </header>
 
 
-  <!-- HERO -->
-  <section class="hero" id="home">
+  <section class="hero">
     <h2>Upgrade Your Style</h2>
-    <p>Discover men's fashion, outfits and everyday style essentials.</p>
+    <p>Discover stylish men's fashion, footwear and accessories.</p>
   </section>
 
 
-  <!-- PRODUCTS -->
-  <section class="section" id="products">
+  <section class="products" id="products">
 
-    <h2>Featured Products</h2>
+    <h2 class="section-title">Featured Footwear</h2>
 
-    <div class="products">
+    <div class="product-grid">
 
+      <!-- LOUIS STICH BOOTS -->
 
-      <!-- 1. BLACK LEATHER JACKET -->
-      <div class="card">
+      <div class="product-card">
 
         <img
-          src="leather_jacket_cropped.jpg"
-          alt="Men's Black Leather Jacket">
+          src="louis-stich-boots.jpg"
+          alt="Louis Stich Classic Black Chelsea Boots for Men"
+        >
 
-        <div class="card-content">
+        <div class="product-info">
 
-          <h3>Men's Black Leather Jacket</h3>
+          <h3>
+            Louis Stich Classic Black Chelsea Boots for Men
+          </h3>
 
           <p>
-            Classic black leather jacket for a clean and stylish look.
+            Upgrade your everyday style with these sleek Louis Stich
+            boots. Their timeless black design makes them easy to pair
+            with bootcut, bell-bottom, straight-fit and casual outfits.
           </p>
 
-          <div class="price">₹1,799</div>
+          <div class="style-tip">
+            <strong>Style Tip:</strong>
+            Pair these boots with bootcut or bell-bottom trousers
+            to make the footwear stand out.
+          </div>
 
           <a
-            class="buy"
-            href="https://link.amazon/B0gpDIj8b"
+            class="buy-btn"
+            href="https://www.amazon.in/dp/B0CSP5WMPL/ref=cm_sw_r_as_gl_apa_gl_i_5Y4DBHNSKG30J0WSVWBD?linkCode=ml1&tag=themensstyled-21&linkId=bba6ad1ca4951371f2a1ddacf183ff83"
             target="_blank"
-            rel="noopener noreferrer">
-            Shop Now
+            rel="nofollow sponsored noopener"
+          >
+            View on Amazon
           </a>
 
         </div>
       </div>
-
-
-      <!-- 2. BLACK HALF ZIP SWEATSHIRT -->
-      <div class="card">
-
-        <img
-          src="black_half_zip_cropped.jpg"
-          alt="Men's Black Half-Zip Sweatshirt">
-
-        <div class="card-content">
-
-          <h3>Men's Black Half-Zip Sweatshirt</h3>
-
-          <p>
-            Minimal black half-zip sweatshirt for everyday casual outfits.
-          </p>
-
-          <div class="price">₹699</div>
-
-          <a
-            class="buy"
-            href="https://amzn.to/4iDemVx"
-            target="_blank"
-            rel="noopener noreferrer">
-            Shop Now
-          </a>
-
-        </div>
-      </div>
-
-
-      <!-- 3. BEIGE PANTS -->
-      <div class="card">
-
-        <img
-          src="beige_pants_cropped.jpg"
-          alt="Men's Snow Beige Pants">
-
-        <div class="card-content">
-
-          <h3>Men's Snow Beige Pants</h3>
-
-          <p>
-            Relaxed wide-fit beige pants for a clean modern outfit.
-          </p>
-
-          <div class="price">Check Price</div>
-
-          <a
-            class="buy"
-            href="https://link.amazon/B0bzM3Iux"
-            target="_blank"
-            rel="noopener noreferrer">
-            Shop Now
-          </a>
-
-        </div>
-      </div>
-
-
-      <!-- 4. COWBOY BELT -->
-      <div class="card">
-
-        <img
-          src="cowboy_belt_cropped.jpg"
-          alt="Western Cowboy Buckle Belt">
-
-        <div class="card-content">
-
-          <h3>Western Cowboy Buckle Belt</h3>
-
-          <p>
-            Bold western-style belt to add character to your casual outfits.
-          </p>
-
-          <div class="price">Check Price</div>
-
-          <a
-            class="buy"
-            href="https://www.amazon.in/dp/B079ZZRMK8/ref=cm_sw_r_as_gl_apa_gl_i_dl_DR3V3EWPAWD1JJXBY0FN?linkCode=ml1&tag=themensstyled-21&linkId=581a1d0b39be308ae21dc53b734320b2"
-            target="_blank"
-            rel="noopener noreferrer">
-            Shop Now
-          </a>
-
-        </div>
-      </div>
-
 
     </div>
   </section>
 
 
-  <!-- FOOTER -->
   <footer>
-    © 2026 Men's Style Daily · Fashion & Style Recommendations
+    <p>© 2026 Men's Style Daily. All rights reserved.</p>
   </footer>
 
 </body>
 </html>
+  
